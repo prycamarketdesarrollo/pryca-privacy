@@ -35,6 +35,24 @@
     ul {
       margin-left: 20px;
     }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 0.95em;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #f4f4f4;
+    }
+    a {
+      color: #1a73e8;
+    }
     footer {
       margin-top: 40px;
       font-size: 0.9em;
@@ -48,7 +66,8 @@
 
     <p>
       Esta Política de Privacidad describe cómo la aplicación <strong>Pryca</strong> (en adelante, “la App”)
-      recopila, usa y protege la información de los usuarios.
+      recopila, usa, almacena, comparte y protege la información de sus usuarios. Al crear una cuenta y utilizar
+      la App, el usuario declara haber leído y aceptado esta Política.
     </p>
 
     <p>
@@ -60,9 +79,11 @@
 
     <h2>1. Alcance de la aplicación</h2>
     <p>
-      Pryca es una aplicación dirigida a <strong>negocios</strong> como bodegas, puestos de mercado,
-      farmacias y pastelerías, que permite realizar <strong>pedidos de productos al por mayor</strong>
-      desde el catálogo de Pryca Market.
+      Pryca es una aplicación <strong>B2B de uso privado</strong>, dirigida exclusivamente a
+      <strong>negocios</strong> registrados (bodegas, kioskos, puestos de mercado, panaderías,
+      farmacias y comercios minoristas) que permite realizar <strong>pedidos de productos al por mayor</strong>
+      desde el catálogo de Pryca Market, visualizar promociones, gestionar el carrito y consultar el
+      estado e historial de sus pedidos.
     </p>
     <p>
       La aplicación <strong>no procesa pagos</strong>, no integra pasarelas de pago ni recopila
@@ -70,85 +91,216 @@
     </p>
 
     <h2>2. Información que recopilamos</h2>
-    <p>La App puede recopilar la siguiente información:</p>
+
+    <h3>2.1. Información que el usuario nos proporciona</h3>
+    <p>Durante el registro y el uso de la App podemos recopilar:</p>
     <ul>
-      <li>Datos del negocio</li>
       <li>Nombres y apellidos</li>
-      <li>Documento de identidad</li>
+      <li>Fecha de nacimiento</li>
+      <li>Tipo y número de documento de identidad (DNI / Carné de Extranjería)</li>
       <li>Correo electrónico</li>
       <li>Número de teléfono celular</li>
-      <li>Dirección del negocio</li>
+      <li>Datos del negocio: razón social, nombre comercial, RUC, tipo de negocio y zona</li>
+      <li>Dirección del negocio, incluyendo las coordenadas seleccionadas por el usuario en el mapa</li>
       <li>Historial de pedidos realizados</li>
     </ul>
 
-    <h2>3. Métodos de autenticación</h2>
+    <h3>2.2. Información que recopilamos automáticamente (datos técnicos y de diagnóstico)</h3>
     <p>
-      Para el acceso a la App, utilizamos los siguientes métodos de autenticación:
+      Para garantizar la estabilidad y seguridad de la App, recopilamos de forma automática datos de
+      diagnóstico a través de <strong>Firebase Crashlytics</strong> (de Google), tales como:
     </p>
+    <ul>
+      <li>Modelo del dispositivo y sistema operativo</li>
+      <li>Versión de la App</li>
+      <li>Identificadores técnicos de instalación de la App</li>
+      <li>Registros (logs) de errores y caídas de la aplicación</li>
+      <li>Dirección IP (de forma transitoria, asociada al reporte técnico)</li>
+    </ul>
+
+    <h3>2.3. Información que NO recopilamos</h3>
+    <p>La App <strong>no</strong> recopila:</p>
+    <ul>
+      <li>Ubicación precisa (GPS) del dispositivo. La App no solicita permiso de ubicación; la dirección del
+        negocio se ingresa o selecciona manualmente en un mapa.</li>
+      <li>Información de pago, bancaria o financiera.</li>
+      <li>Identificadores de publicidad (Advertising ID) y no realizamos seguimiento (tracking) con fines
+        publicitarios.</li>
+      <li>Acceso a cámara, fotos, galería, contactos, micrófono ni calendario.</li>
+    </ul>
+
+    <h2>3. Métodos de autenticación</h2>
+    <p>Para el acceso a la App ofrecemos los siguientes métodos de autenticación:</p>
     <ul>
       <li>Inicio de sesión con Google</li>
       <li>Inicio de sesión con Facebook</li>
       <li>Inicio de sesión con Apple</li>
-      <li>Inicio de sesión con número de celular mediante código OTP</li>
+      <li>Inicio de sesión con correo electrónico y contraseña (uso restringido a personal autorizado)</li>
     </ul>
-
     <p>
-      La autenticación se gestiona a través de <strong>Firebase Authentication</strong>.
-      Pryca solo accede a los datos básicos necesarios para identificar al usuario.
+      La autenticación se gestiona a través de <strong>Firebase Authentication</strong> (de Google).
+      Pryca solo accede a los datos básicos necesarios para identificar al usuario (por ejemplo, nombre
+      y correo electrónico). No almacenamos contraseñas de proveedores externos.
     </p>
 
-    <h2>4. Uso de Facebook Login</h2>
+    <h2>4. Inicio de sesión con Facebook (Facebook Login)</h2>
     <p>
-      Al iniciar sesión con Facebook, la App puede acceder a información básica del perfil
-      como nombre y correo electrónico, de acuerdo con los permisos otorgados por el usuario.
+      Cuando el usuario elige iniciar sesión con Facebook, solicitamos su consentimiento para acceder
+      únicamente a la siguiente información de su perfil de Facebook:
+    </p>
+    <ul>
+      <li>Nombre del perfil público</li>
+      <li>Dirección de correo electrónico</li>
+    </ul>
+    <p>
+      Esta información se utiliza <strong>exclusivamente</strong> para autenticar al usuario y crear o
+      gestionar su cuenta dentro de la App. <strong>No</strong> publicamos contenido en Facebook,
+      <strong>no</strong> accedemos a la lista de amigos o contactos del usuario y <strong>no</strong>
+      compartimos esta información con terceros con fines publicitarios.
     </p>
     <p>
-      La información obtenida desde Facebook se utiliza únicamente para fines de autenticación
-      y gestión de la cuenta dentro de la App.
+      El usuario puede revocar en cualquier momento el acceso de la App desde la configuración de su cuenta
+      de Facebook (Configuración y privacidad → Configuración → Aplicaciones y sitios web). Asimismo, puede
+      solicitar la eliminación de los datos obtenidos a través de Facebook Login conforme a la sección
+      <a href="#eliminacion">“Eliminación de la cuenta y de los datos”</a> de esta Política.
     </p>
 
     <h2>5. Uso de la información</h2>
     <p>La información recopilada se utiliza para:</p>
     <ul>
-      <li>Crear y gestionar la cuenta del usuario</li>
-      <li>Permitir la realización y gestión de pedidos</li>
-      <li>Contactar al usuario en relación con sus pedidos</li>
-      <li>Mejorar la experiencia y funcionamiento de la App</li>
+      <li>Crear, verificar y gestionar la cuenta del usuario</li>
+      <li>Validar la condición de cliente del negocio y habilitar la realización de pedidos</li>
+      <li>Permitir la realización, el seguimiento y la gestión de pedidos</li>
+      <li>Contactar al usuario en relación con sus pedidos o su cuenta</li>
+      <li>Garantizar la seguridad, prevenir fraudes y diagnosticar errores de la App</li>
+      <li>Mejorar la experiencia y el funcionamiento de la App</li>
+      <li>Cumplir con obligaciones legales aplicables</li>
     </ul>
 
-    <h2>6. Almacenamiento y seguridad</h2>
+    <h2>6. Servicios de terceros</h2>
     <p>
-      Aplicamos medidas técnicas y organizativas razonables para proteger la información
-      personal contra accesos no autorizados, pérdidas o usos indebidos.
+      Para operar, la App utiliza proveedores que actúan como encargados del tratamiento. Estos proveedores
+      tratan la información conforme a sus propias políticas de privacidad:
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Proveedor</th>
+          <th>Finalidad</th>
+          <th>Política de privacidad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Google (Firebase Authentication y Firebase Crashlytics)</td>
+          <td>Autenticación de usuarios y diagnóstico de errores</td>
+          <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+        </tr>
+        <tr>
+          <td>Google Maps Platform (Geocoding API)</td>
+          <td>Conversión de direcciones en coordenadas para registrar la dirección del negocio</td>
+          <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+        </tr>
+        <tr>
+          <td>Meta Platforms, Inc. (Facebook Login)</td>
+          <td>Autenticación de usuarios mediante cuenta de Facebook</td>
+          <td><a href="https://www.facebook.com/privacy/policy" target="_blank" rel="noopener">facebook.com/privacy/policy</a></td>
+        </tr>
+        <tr>
+          <td>Apple Inc. (Iniciar sesión con Apple)</td>
+          <td>Autenticación de usuarios mediante cuenta de Apple</td>
+          <td><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a></td>
+        </tr>
+        <tr>
+          <td>Mapbox, Inc.</td>
+          <td>Visualización de mapas para la selección de la dirección del negocio</td>
+          <td><a href="https://www.mapbox.com/legal/privacy" target="_blank" rel="noopener">mapbox.com/legal/privacy</a></td>
+        </tr>
+        <tr>
+          <td>TOTAL CALIDAD AMERICA S.A.C. (servidores propios / API corporativo)</td>
+          <td>Gestión de cuentas, catálogo, pedidos e historial</td>
+          <td>La presente Política</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      No vendemos ni alquilamos información personal a terceros. Solo compartimos datos con estos proveedores
+      en la medida necesaria para prestar el servicio, o cuando la ley lo exija.
     </p>
 
-    <h2>7. Eliminación de datos</h2>
+    <h2>7. Transferencias internacionales</h2>
     <p>
-      El usuario puede solicitar la eliminación de sus datos personales en cualquier momento
-      enviando un correo electrónico a:
+      Algunos de los proveedores mencionados (Google, Meta, Apple y Mapbox) procesan información en servidores
+      ubicados fuera del Perú. Al utilizar la App, el usuario reconoce que su información puede ser tratada en
+      otros países que cuenten con un nivel de protección de datos adecuado, aplicando las garantías exigidas por
+      la normativa peruana.
+    </p>
+
+    <h2>8. Almacenamiento y seguridad</h2>
+    <p>
+      Aplicamos medidas técnicas y organizativas razonables para proteger la información personal contra accesos
+      no autorizados, pérdidas o usos indebidos. Las credenciales y los tokens de sesión se guardan de forma
+      cifrada en el almacenamiento seguro del dispositivo, y las comunicaciones con nuestros servidores se realizan
+      a través de canales protegidos.
+    </p>
+
+    <h2>9. Conservación de los datos</h2>
+    <p>
+      Conservamos la información personal mientras la cuenta del usuario permanezca activa y durante el tiempo
+      necesario para cumplir con las finalidades descritas en esta Política, así como con las obligaciones legales,
+      contables y tributarias aplicables. Cuando los datos dejen de ser necesarios, serán eliminados o anonimizados
+      de forma segura.
+    </p>
+
+    <h2>10. Derechos del usuario</h2>
+    <p>
+      Conforme a la Ley N.° 29733, Ley de Protección de Datos Personales del Perú, y su Reglamento, el usuario tiene
+      derecho a acceder, rectificar, actualizar, cancelar (suprimir) y oponerse al tratamiento de sus datos
+      personales. Para ejercer estos derechos, puede escribir a:
     </p>
     <p>
       <strong>prycamarket.desarrollo@gmail.com</strong>
     </p>
+
+    <h2 id="eliminacion">11. Eliminación de la cuenta y de los datos</h2>
     <p>
-      La solicitud será atendida en un plazo razonable conforme a la normativa aplicable.
+      El usuario puede solicitar la eliminación de su cuenta y de sus datos personales (incluidos los datos
+      obtenidos mediante Facebook Login) en cualquier momento mediante cualquiera de estas vías:
+    </p>
+    <ul>
+      <li>Enviando un correo electrónico a <strong>prycamarket.desarrollo@gmail.com</strong> con el asunto
+        “Eliminación de cuenta”.</li>
+      <li>A través de nuestra página de solicitud de eliminación de datos:
+        <a href="https://legal.prycamarket.com/data-deletion" target="_blank" rel="noopener">
+        Solicitud de eliminación de datos</a>.</li>
+    </ul>
+    <p>
+      Una vez verificada la identidad del solicitante, la solicitud será atendida en un plazo razonable conforme a la
+      normativa aplicable. Determinada información podrá conservarse cuando exista una obligación legal que así lo exija.
     </p>
 
-    <h2>8. Público objetivo</h2>
+    <h2>12. Público objetivo y menores de edad</h2>
     <p>
-      La App está dirigida exclusivamente a <strong>negocios</strong> y no está diseñada
-      para ser utilizada por niños.
+      La App está dirigida exclusivamente a <strong>negocios</strong> y a personas mayores de edad responsables de
+      dichos negocios. No está diseñada ni dirigida a niños, y no recopilamos de forma intencional datos de menores
+      de edad.
     </p>
 
-    <h2>9. Cambios en esta política</h2>
+    <h2>13. Cambios en esta política</h2>
     <p>
-      Pryca se reserva el derecho de actualizar esta Política de Privacidad.
-      Cualquier cambio será publicado en esta misma URL.
+      Pryca se reserva el derecho de actualizar esta Política de Privacidad. Cualquier cambio será publicado en esta
+      misma URL, indicando la fecha de la última actualización.
+    </p>
+
+    <h2>14. Contacto</h2>
+    <p>
+      Para cualquier consulta sobre esta Política de Privacidad o sobre el tratamiento de sus datos personales, puede
+      escribirnos a <strong>prycamarket.desarrollo@gmail.com</strong>.
     </p>
 
     <footer>
       <p>
-        Última actualización: <strong>16 de diciembre de 2025</strong>
+        Última actualización: <strong>28 de mayo de 2026</strong>
       </p>
     </footer>
   </div>
