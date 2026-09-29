@@ -72,15 +72,17 @@
       <li>Correo electrónico</li>
       <li>Número de teléfono celular</li>
       <li>Tipo y número de documento de identidad (DNI / Carné de Extranjería)</li>
-      <li>Credenciales de inicio de sesión (Google, Facebook, Apple o correo electrónico)</li>
+      <li>Credenciales de inicio de sesión (correo electrónico y contraseña), incluida la cuenta en Firebase Authentication</li>
     </ul>
     <p>
       Por obligaciones legales, contables y tributarias, <strong>no se eliminan</strong>
       y se conservan los siguientes datos:
     </p>
     <ul>
-      <li>Datos del negocio: razón social, nombre comercial, RUC, tipo de negocio y zona</li>
+      <li>Datos del negocio: tipo y número de documento, razón social, nombre comercial y tipo de negocio</li>
       <li>Dirección del negocio y las coordenadas seleccionadas en el mapa</li>
+      <li>Ubicación del dispositivo obtenida durante la validación del registro, en el caso de los negocios
+        que ya eran clientes</li>
       <li>Historial de pedidos y comprobantes (datos de facturación)</li>
     </ul>
     <p>
@@ -130,23 +132,11 @@
 
     <h2>Datos gestionados por servicios de terceros</h2>
     <p>
-      Pryca utiliza servicios de autenticación de terceros (Google, Facebook y Apple)
-      y el servicio de diagnóstico Firebase Crashlytics. La eliminación que realizamos
-      cubre los datos almacenados en los sistemas de Pryca.
+      Pryca utiliza Firebase Authentication para crear y autenticar las cuentas, y el servicio de
+      diagnóstico Firebase Crashlytics. Al eliminar la cuenta también se elimina el usuario en Firebase
+      Authentication. Los reportes técnicos de Crashlytics no contienen datos de tu perfil y se eliminan
+      automáticamente según los plazos de retención de Google.
     </p>
-    <p>
-      Adicionalmente, el usuario puede revocar el acceso de Pryca y gestionar la
-      eliminación de los datos en poder de estos proveedores desde la configuración de
-      su respectiva cuenta:
-    </p>
-    <ul>
-      <li><strong>Facebook:</strong> Configuración y privacidad → Configuración →
-        Aplicaciones y sitios web → seleccionar Pryca → Eliminar.</li>
-      <li><strong>Google:</strong> Cuenta de Google → Seguridad → Conexiones con
-        terceros → seleccionar Pryca → Eliminar acceso.</li>
-      <li><strong>Apple:</strong> Ajustes → [tu nombre] → Inicio de sesión y seguridad →
-        Iniciar sesión con Apple → seleccionar Pryca → Dejar de usar Iniciar sesión con Apple.</li>
-    </ul>
 
     <h2>Contacto</h2>
     <p>
@@ -175,7 +165,7 @@
 
     <footer>
       <p>
-        Última actualización: <strong>20 de agosto de 2026</strong>
+        Última actualización: <strong>29 de septiembre de 2026</strong>
       </p>
     </footer>
   </div>
